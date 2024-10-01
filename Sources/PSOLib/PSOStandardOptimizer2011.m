@@ -13,13 +13,14 @@
 #import "PSOAlea.h"
 #import "PSOImmutableProxy.h"
 #import <libkern/OSAtomic.h>
+#import <os/lock.h>
 
 NSUInteger const PSOPopulationSizeMin = 2;
 NSUInteger const PSOPopulationSizeMax = 100;
 int const PSODefaultK = 3;
 
 @interface PSOStandardOptimizer2011 () {
-    OSSpinLock _vectorsLock;
+    os_unfair_lock _vectorsLock;
 }
 @property (nonatomic) double bestFitness;
 @property (atomic) NSUInteger iteration;
@@ -111,7 +112,7 @@ int const PSODefaultK = 3;
         _c2 = _c1;
         self.K = PSODefaultK;
         
-        _vectorsLock = OS_SPINLOCK_INIT;
+        _vectorsLock = OS_UNFAIR_LOCK_INIT;
     }
     return self;
 }
@@ -421,17 +422,17 @@ int const PSODefaultK = 3;
 }
 
 - (void)lockVectors {
-    OSSpinLockLock(&_vectorsLock);
+    os_unfair_lock_lock(&_vectorsLock);
 }
 
 - (void)unlockVectors {
-    OSSpinLockUnlock(&_vectorsLock);
+    os_unfair_lock_lock(&_vectorsLock);
 }
 
 - (BOOL)areVectorsLocked {
-    BOOL lockSuccess = OSSpinLockTry(&_vectorsLock);
+    BOOL lockSuccess = os_unfair_lock_trylock(&_vectorsLock);
     if (lockSuccess) {
-        OSSpinLockUnlock(&_vectorsLock);
+        os_unfair_lock_unlock(&_vectorsLock);
     }
     return NO == lockSuccess;
 }

@@ -8,7 +8,7 @@
 //  Distributed under the MIT license.
 //
 
-#import <PSOLib/PSOStandardOptimizer2011.h>
+#import <PSOStandardOptimizer2011.h>
 
 /**
  *  Extension with protected properties and methods to use in subclass.

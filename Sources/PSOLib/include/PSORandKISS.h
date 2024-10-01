@@ -16,10 +16,10 @@
  *
  *  @param seed Seed value.
  */
-FOUNDATION_EXPORT void PSOSeedRandKISS(PSOUint seed);
+void PSOSeedRandKISS(PSOUint seed);
 /**
  *  Returns pseudorandom number uniformely distributed from 0 to PSORandKISSMax.
  *
  *  @return Pseudorandom unsigned integer of PSOUint type.
  */
-FOUNDATION_EXPORT PSOUint PSORandKISS();
+PSOUint PSORandKISS();

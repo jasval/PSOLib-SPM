@@ -1,7 +1,5 @@
-[![CI Status](http://img.shields.io/travis/IvanRublev/PSOLib.svg?style=flat)](https://travis-ci.org/IvanRublev/VRFoundationToolkit)
-[![Version](https://img.shields.io/cocoapods/v/PSOLib.svg?style=flat)](http://cocoapods.org/pods/PSOLib)
-[![License](https://img.shields.io/cocoapods/l/PSOLib.svg?style=flat)](http://cocoapods.org/pods/PSOLib)
-[![Platform](https://img.shields.io/cocoapods/p/PSOLib.svg?style=flat)](http://cocoapods.org/pods/PSOLib)
+SPM Refactor Author: [Jasper Valdivia](mailto: contact@jaspervaldivia.dev)
+Original Author: Ivan Rublev
 
 Purpose
 -------
@@ -26,32 +24,7 @@ Search the minimum of 3 dimensional sphere function takes about ~206ms in ~180 i
 Installation
 ------------
 
-Use Cocoapods. Add the following line to your Podfile:
-
-```
-pod "PSOLib", "~> 1.0.0"
-```
-
-And then run following command in projects directory:
-
-```console
-pod install
-```
-
-Then import the PSOLib framework in your source code:
-
-```objc
-@import PSOLib;
-```
-
-If you want to use library on iOS 7.x or don't use pods as frameworks (haven't define `use_frameworks!` flag in your Podfile) then import the umbrella header directly in your source code:
-
-```objc
-#import <PSOLib/PSOLib.h>
-```
-
-If you don't use Cocoapods you can clone the repository and add library files from `Pod` directory to your project.
-
+Install using SPM referring to the repository address.
 
 Usage
 -----
@@ -205,7 +178,7 @@ Release notes
 
 Library author
 --------------
-
+Jasper Valdivia (Refactor), contact@jaspervaldivia.dev
 Ivan Rublev, ivan@ivanrublev.me
 
 
