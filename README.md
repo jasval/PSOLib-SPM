@@ -1,4 +1,4 @@
-SPM Refactor Author: [Jasper Valdivia](mailto: contact@jaspervaldivia.dev)
+SPM Refactor Author: [Jasper Valdivia](contact@jaspervaldivia.dev)
 Original Author: Ivan Rublev
 
 Purpose

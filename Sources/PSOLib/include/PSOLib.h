@@ -8,8 +8,8 @@
 //  Distributed under the MIT license.
 //
 
-#import <PSOLib/PSOStandardOptimizer2011.h>
-#import <PSOLib/PSOStandardOptimizer2011CircleTopology.h>
-#import <PSOLib/PSOFitnessCalculating.h>
-#import <PSOLib/PSOSearchSpace.h>
-#import <PSOLib/PSOAlea.h>
+#import <PSOStandardOptimizer2011.h>
+#import <PSOStandardOptimizer2011CircleTopology.h>
+#import <PSOFitnessCalculating.h>
+#import <PSOSearchSpace.h>
+#import <PSOAlea.h>
